@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{C7622939-CA36-41F8-9BAA-4FC528DC9728}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RustTweakerDemo</RootNamespace>
+    <AssemblyName>RustTweaker</AssemblyName>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>RustTweaker.ico</ApplicationIcon>
+    <StartupObject>WpfApp1.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management.Automation">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.ServicePoint">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.ServicePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebClient">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.WebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Loader">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Runtime.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\System.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Vanara.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Kernel32">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\Vanara.PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>..\..\..\..\..\Program Files (x86)\RustTweaker\WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="A0124A91.cs" />
+    <Compile Include="A038280B.cs" />
+    <Compile Include="A0821B9C.cs" />
+    <Compile Include="A0936734.cs" />
+    <Compile Include="A1045927.cs" />
+    <Compile Include="A11FFCA0.cs" />
+    <Compile Include="A134B03A.cs" />
+    <Compile Include="A183F5B7.cs" />
+    <Compile Include="A185EC01.cs" />
+    <Compile Include="A1B35289.cs" />
+    <Compile Include="A213EC8F.cs" />
+    <Compile Include="A223891D.cs" />
+    <Compile Include="A22EAF1A.cs" />
+    <Compile Include="A236D3B6.cs" />
+    <Compile Include="A239443C.cs" />
+    <Compile Include="A23B360B.cs" />
+    <Compile Include="A28D4FA1.cs" />
+    <Compile Include="A2A05398.cs" />
+    <Compile Include="A2A67D93.cs" />
+    <Compile Include="A2AE8F99.cs" />
+    <Compile Include="A30F8F80.cs" />
+    <Compile Include="A331BEB2.cs" />
+    <Compile Include="A3320FA7.cs" />
+    <Compile Include="A33CBF35.cs" />
+    <Compile Include="A3903433.cs" />
+    <Compile Include="A3B2DE09.cs" />
+    <Compile Include="A3B43D3F.cs" />
+    <Compile Include="A3B621AA.cs" />
+    <Compile Include="A40F9CB0.cs" />
+    <Compile Include="A41B109F.cs" />
+    <Compile Include="A42ABF2C.cs" />
+    <Compile Include="A43450B7.cs" />
+    <Compile Include="A4A931B4.cs" />
+    <Compile Include="A52A301E.cs" />
+    <Compile Include="A5BC5B85.cs" />
+    <Compile Include="A60C433D.cs" />
+    <Compile Include="A616601C.cs" />
+    <Compile Include="A61A3491.cs" />
+    <Compile Include="A6962CBA.cs" />
+    <Compile Include="A70A40A9.cs" />
+    <Compile Include="A736350A.cs" />
+    <Compile Include="A78B4405.cs" />
+    <Compile Include="A7A6E4B1.cs" />
+    <Compile Include="A7AD17B2.cs" />
+    <Compile Include="A7BD1E14.cs" />
+    <Compile Include="A7BE4B95.cs" />
+    <Compile Include="A81BD938.cs" />
+    <Compile Include="A827F1A8.cs" />
+    <Compile Include="A838A89B.cs" />
+    <Compile Include="A88CD8A4.cs" />
+    <Compile Include="A8951688.cs" />
+    <Compile Include="A90F2C1F.cs" />
+    <Compile Include="A92C95B3.cs" />
+    <Compile Include="A92D3803.cs" />
+    <Compile Include="A935602C.cs" />
+    <Compile Include="A9876694.cs" />
+    <Compile Include="A98DFCB6.cs" />
+    <Compile Include="A9BF4FAC.cs" />
+    <Compile Include="AA17DF93.cs" />
+    <Compile Include="AA2B3D09.cs" />
+    <Compile Include="AA38F62E.cs" />
+    <Compile Include="AA9349A4.cs" />
+    <Compile Include="AAAF7919.cs" />
+    <Compile Include="AABC1BBE.cs" />
+    <Compile Include="AABC4F90.cs" />
+    <Compile Include="AB14AD85.cs" />
+    <Compile Include="AB36429A.cs" />
+    <Compile Include="AB3FE422.cs" />
+    <Compile Include="AB86B21F.cs" />
+    <Compile Include="AB8B7E24.cs" />
+    <Compile Include="ABBAAAA3.cs" />
+    <Compile Include="AC0187B4.cs" />
+    <Compile Include="AC0473A8.cs" />
+    <Compile Include="AC10C72E.cs" />
+    <Compile Include="AC841124.cs" />
+    <Compile Include="ACB3138E.cs" />
+    <Compile Include="AD375407.cs" />
+    <Compile Include="AD8B4523.cs" />
+    <Compile Include="ADB2BC82.cs" />
+    <Compile Include="AE013107.cs" />
+    <Compile Include="AE15D228.cs" />
+    <Compile Include="AE2AE992.cs" />
+    <Compile Include="AE8F9233.cs" />
+    <Compile Include="AEB98D00.cs" />
+    <Compile Include="AF248415.cs" />
+    <Compile Include="AF262BA0.cs" />
+    <Compile Include="AF3310B6.cs" />
+    <Compile Include="AF809519.cs" />
+    <Compile Include="AF830F8A.cs" />
+    <Compile Include="AF8641AB.cs" />
+    <Compile Include="AF8F029A.cs" />
+    <Compile Include="AF93C927.cs" />
+    <Compile Include="AF9AB181.cs" />
+    <Compile Include="B016B1A1.cs" />
+    <Compile Include="B01B5A04.cs" />
+    <Compile Include="B0248586.cs" />
+    <Compile Include="B02C999B.cs" />
+    <Compile Include="B02F0004.cs" />
+    <Compile Include="B086D99E.cs" />
+    <Compile Include="B090573C.cs" />
+    <Compile Include="B1223B01.cs" />
+    <Compile Include="B13395B8.cs" />
+    <Compile Include="B137D1BE.cs" />
+    <Compile Include="B137DF22.cs" />
+    <Compile Include="B1BC44AE.cs" />
+    <Compile Include="B216D12F.cs" />
+    <Compile Include="B21FF186.cs" />
+    <Compile Include="B23639A5.cs" />
+    <Compile Include="B28293BC.cs" />
+    <Compile Include="B29380A1.cs" />
+    <Compile Include="B294CB03.cs" />
+    <Compile Include="B308290E.cs" />
+    <Compile Include="B30B991A.cs" />
+    <Compile Include="B3199909.cs" />
+    <Compile Include="B31B1AB2.cs" />
+    <Compile Include="B32F1DAC.cs" />
+    <Compile Include="B3BA5D97.cs" />
+    <Compile Include="B400F7A2.cs" />
+    <Compile Include="B42BCB8F.cs" />
+    <Compile Include="B50A4B18.cs" />
+    <Compile Include="B5BC4603.cs" />
+    <Compile Include="B6282529.cs" />
+    <Compile Include="B62C30AD.cs" />
+    <Compile Include="B631B537.cs" />
+    <Compile Include="B715FE13.cs" />
+    <Compile Include="B71E5635.cs" />
+    <Compile Include="B72C3280.cs" />
+    <Compile Include="B7363BB0.cs" />
+    <Compile Include="B73D1434.cs" />
+    <Compile Include="B79DF12C.cs" />
+    <Compile Include="B7A2F5B6.cs" />
+    <Compile Include="B8172A38.cs" />
+    <Compile Include="B8198499.cs" />
+    <Compile Include="B81E4531.cs" />
+    <Compile Include="B897A19A.cs" />
+    <Compile Include="B9102232.cs" />
+    <Compile Include="B9123508.cs" />
+    <Compile Include="B9181495.cs" />
+    <Compile Include="B99B122A.cs" />
+    <Compile Include="B99F2FBA.cs" />
+    <Compile Include="B9BF7625.cs" />
+    <Compile Include="BA10DCBA.cs" />
+    <Compile Include="BA272031.cs" />
+    <Compile Include="BA3C7031.cs" />
+    <Compile Include="BA91591D.cs" />
+    <Compile Include="BAA65809.cs" />
+    <Compile Include="BAA683BF.cs" />
+    <Compile Include="BAB5822B.cs" />
+    <Compile Include="BB1C7490.cs" />
+    <Compile Include="BB285929.cs" />
+    <Compile Include="BB348B21.cs" />
+    <Compile Include="BB833001.cs" />
+    <Compile Include="BBA99D01.cs" />
+    <Compile Include="BBAF1AAB.cs" />
+    <Compile Include="BC031AA2.cs" />
+    <Compile Include="BC04CB32.cs" />
+    <Compile Include="BC1FE226.cs" />
+    <Compile Include="BC8B1000.cs" />
+    <Compile Include="BC980816.cs" />
+    <Compile Include="BCBA2524.cs" />
+    <Compile Include="BD0165B5.cs" />
+    <Compile Include="BD018D8C.cs" />
+    <Compile Include="BD1E9988.cs" />
+    <Compile Include="BD2F2C2E.cs" />
+    <Compile Include="BD9B4601.cs" />
+    <Compile Include="BDB30AAA.cs" />
+    <Compile Include="BE069A06.cs" />
+    <Compile Include="BE2CFA35.cs" />
+    <Compile Include="BE2F3C83.cs" />
+    <Compile Include="BEAF3C01.cs" />
+    <Compile Include="BF18AAB8.cs" />
+    <Compile Include="BF1EDB12.cs" />
+    <Compile Include="BF23F036.cs" />
+    <Compile Include="BF2CABA4.cs" />
+    <Compile Include="BF3A772B.cs" />
+    <Compile Include="BFA9872B.cs" />
+    <Compile Include="BFB0FE20.cs" />
+    <Compile Include="C0005F1D.cs" />
+    <Compile Include="C0068F24.cs" />
+    <Compile Include="C009F2A4.cs" />
+    <Compile Include="C0896A3F.cs" />
+    <Compile Include="C110D238.cs" />
+    <Compile Include="C1114438.cs" />
+    <Compile Include="C1215EB1.cs" />
+    <Compile Include="C1255706.cs" />
+    <Compile Include="C12C3D92.cs" />
+    <Compile Include="C1846905.cs" />
+    <Compile Include="C19B5604.cs" />
+    <Compile Include="C1BAFA95.cs" />
+    <Compile Include="C23CE42D.cs" />
+    <Compile Include="C285029E.cs" />
+    <Compile Include="C28DAF19.cs" />
+    <Compile Include="C3020339.cs" />
+    <Compile Include="C31F2D02.cs" />
+    <Compile Include="C3863A24.cs" />
+    <Compile Include="C4102C82.cs" />
+    <Compile Include="C413B6B5.cs" />
+    <Compile Include="C42392B9.cs" />
+    <Compile Include="C427C50E.cs" />
+    <Compile Include="C488C63C.cs" />
+    <Compile Include="C4945829.cs" />
+    <Compile Include="C49E3329.cs" />
+    <Compile Include="C4AAF91B.cs" />
+    <Compile Include="C504BB28.cs" />
+    <Compile Include="C511643C.cs" />
+    <Compile Include="C539B23D.cs" />
+    <Compile Include="C53B2CAB.cs" />
+    <Compile Include="C592C804.cs" />
+    <Compile Include="C5BC8A2D.cs" />
+    <Compile Include="C626073A.cs" />
+    <Compile Include="C69FF99D.cs" />
+    <Compile Include="C6B0A826.cs" />
+    <Compile Include="C6B2540F.cs" />
+    <Compile Include="C70D2413.cs" />
+    <Compile Include="C716E38B.cs" />
+    <Compile Include="C72B1C8C.cs" />
+    <Compile Include="C7393293.cs" />
+    <Compile Include="C7850836.cs" />
+    <Compile Include="C7B62CBA.cs" />
+    <Compile Include="C803659D.cs" />
+    <Compile Include="C8241629.cs" />
+    <Compile Include="C8BC1D12.cs" />
+    <Compile Include="C90EC9B5.cs" />
+    <Compile Include="C925060C.cs" />
+    <Compile Include="C92E2BB5.cs" />
+    <Compile Include="C99E0322.cs" />
+    <Compile Include="CA11A129.cs" />
+    <Compile Include="CA97E431.cs" />
+    <Compile Include="CB136A30.cs" />
+    <Compile Include="CB1CDA3A.cs" />
+    <Compile Include="CB3A6597.cs" />
+    <Compile Include="CB924B38.cs" />
+    <Compile Include="CB99EC04.cs" />
+    <Compile Include="CBBC6DB5.cs" />
+    <Compile Include="CC2BA03D.cs" />
+    <Compile Include="CCB311BC.cs" />
+    <Compile Include="CD01BEAE.cs" />
+    <Compile Include="CD8042BA.cs" />
+    <Compile Include="CE2508BE.cs" />
+    <Compile Include="CE32203A.cs" />
+    <Compile Include="CE35B683.cs" />
+    <Compile Include="CE887194.cs" />
+    <Compile Include="CE8FC737.cs" />
+    <Compile Include="CEA79DB0.cs" />
+    <Compile Include="CF146D82.cs" />
+    <Compile Include="CF2C64A0.cs" />
+    <Compile Include="CF87C6B6.cs" />
+    <Compile Include="CF996DAF.cs" />
+    <Compile Include="CFA6F38D.cs" />
+    <Compile Include="D029AE38.cs" />
+    <Compile Include="D0352E24.cs" />
+    <Compile Include="D11E7113.cs" />
+    <Compile Include="D23D4797.cs" />
+    <Compile Include="D295D98F.cs" />
+    <Compile Include="D2B9D912.cs" />
+    <Compile Include="D306391D.cs" />
+    <Compile Include="D30ED728.cs" />
+    <Compile Include="D3A3C13A.cs" />
+    <Compile Include="D414A811.cs" />
+    <Compile Include="D437ED99.cs" />
+    <Compile Include="D4894B18.cs" />
+    <Compile Include="D50FD99C.cs" />
+    <Compile Include="D5118999.cs" />
+    <Compile Include="D586FAA7.cs" />
+    <Compile Include="D5A82CB6.cs" />
+    <Compile Include="D609753E.cs" />
+    <Compile Include="D6893124.cs" />
+    <Compile Include="D6B5012C.cs" />
+    <Compile Include="D72BE2AF.cs" />
+    <Compile Include="D73CF906.cs" />
+    <Compile Include="D78ADA32.cs" />
+    <Compile Include="D7914D1A.cs" />
+    <Compile Include="D7AF0109.cs" />
+    <Compile Include="D818BA1A.cs" />
+    <Compile Include="D897EEB6.cs" />
+    <Compile Include="D89ECE0E.cs" />
+    <Compile Include="D9824889.cs" />
+    <Compile Include="D9AA169E.cs" />
+    <Compile Include="D9B70E04.cs" />
+    <Compile Include="D9B9F9BD.cs" />
+    <Compile Include="DA0042B3.cs" />
+    <Compile Include="DA06F6B2.cs" />
+    <Compile Include="DA3C92BE.cs" />
+    <Compile Include="DA961134.cs" />
+    <Compile Include="DAA13C2F.cs" />
+    <Compile Include="DAB6CE3D.cs" />
+    <Compile Include="DB1BC89E.cs" />
+    <Compile Include="DB304F0C.cs" />
+    <Compile Include="DB3E1330.cs" />
+    <Compile Include="DB89EF23.cs" />
+    <Compile Include="DC095101.cs" />
+    <Compile Include="DC1EF12B.cs" />
+    <Compile Include="DC26349C.cs" />
+    <Compile Include="DC315A3A.cs" />
+    <Compile Include="DC3431A2.cs" />
+    <Compile Include="DC3A0701.cs" />
+    <Compile Include="DC91859A.cs" />
+    <Compile Include="DC919FB5.cs" />
+    <Compile Include="DC93C72A.cs" />
+    <Compile Include="DCA92209.cs" />
+    <Compile Include="DD07E228.cs" />
+    <Compile Include="DE3274BA.cs" />
+    <Compile Include="DEA5F889.cs" />
+    <Compile Include="DF0EAA30.cs" />
+    <Compile Include="DF12E49C.cs" />
+    <Compile Include="DFBAD8B4.cs" />
+    <Compile Include="DFBF98A3.cs" />
+    <Compile Include="E0174F0D.cs" />
+    <Compile Include="E023A50A.cs" />
+    <Compile Include="E0B61E1F.cs" />
+    <Compile Include="E1126A0D.cs" />
+    <Compile Include="E11498A6.cs" />
+    <Compile Include="E1317A18.cs" />
+    <Compile Include="E192CF22.cs" />
+    <Compile Include="E1A7CE8F.cs" />
+    <Compile Include="E1B72AB4.cs" />
+    <Compile Include="E1BD0393.cs" />
+    <Compile Include="E20E033A.cs" />
+    <Compile Include="E21BF430.cs" />
+    <Compile Include="E2859C3E.cs" />
+    <Compile Include="E2878613.cs" />
+    <Compile Include="E2A02FBE.cs" />
+    <Compile Include="E3086801.cs" />
+    <Compile Include="E308B6BF.cs" />
+    <Compile Include="E30A87A8.cs" />
+    <Compile Include="E30C6F31.cs" />
+    <Compile Include="E30F38A3.cs" />
+    <Compile Include="E316D300.cs" />
+    <Compile Include="E32CDC88.cs" />
+    <Compile Include="E33286B8.cs" />
+    <Compile Include="E33C722B.cs" />
+    <Compile Include="E38D7698.cs" />
+    <Compile Include="E40DE23A.cs" />
+    <Compile Include="E4196C31.cs" />
+    <Compile Include="E4250989.cs" />
+    <Compile Include="E483F70E.cs" />
+    <Compile Include="E4B3C924.cs" />
+    <Compile Include="E50DD490.cs" />
+    <Compile Include="E5157DBC.cs" />
+    <Compile Include="E52AF7A7.cs" />
+    <Compile Include="E587C018.cs" />
+    <Compile Include="E58FD536.cs" />
+    <Compile Include="E5B3C82F.cs" />
+    <Compile Include="E6011333.cs" />
+    <Compile Include="E60AAB02.cs" />
+    <Compile Include="E6125991.cs" />
+    <Compile Include="E696679A.cs" />
+    <Compile Include="E6BEAABE.cs" />
+    <Compile Include="E71CC321.cs" />
+    <Compile Include="E72C110D.cs" />
+    <Compile Include="E7854517.cs" />
+    <Compile Include="E7BFD88F.cs" />
+    <Compile Include="E81ABB85.cs" />
+    <Compile Include="E826A139.cs" />
+    <Compile Include="E8BB3607.cs" />
+    <Compile Include="E90D3216.cs" />
+    <Compile Include="E9328A99.cs" />
+    <Compile Include="E9AF2E9E.cs" />
+    <Compile Include="EA1AE2B2.cs" />
+    <Compile Include="EA2DB525.cs" />
+    <Compile Include="EA989A0C.cs" />
+    <Compile Include="EB09948B.cs" />
+    <Compile Include="EC20BB1D.cs" />
+    <Compile Include="EC893480.cs" />
+    <Compile Include="ECBC87BD.cs" />
+    <Compile Include="ED150A9A.cs" />
+    <Compile Include="ED17271F.cs" />
+    <Compile Include="ED17C90D.cs" />
+    <Compile Include="ED26469D.cs" />
+    <Compile Include="ED9C54AD.cs" />
+    <Compile Include="EE2E8737.cs" />
+    <Compile Include="EE33B43B.cs" />
+    <Compile Include="EE9FB4B2.cs" />
+    <Compile Include="EF0F5F39.cs" />
+    <Compile Include="EF1FC686.cs" />
+    <Compile Include="EF267B93.cs" />
+    <Compile Include="EF8125B3.cs" />
+    <Compile Include="EF886083.cs" />
+    <Compile Include="EFBF6239.cs" />
+    <Compile Include="EncryptionService.cs" />
+    <Compile Include="F00A5103.cs" />
+    <Compile Include="F01843AD.cs" />
+    <Compile Include="F0262A3E.cs" />
+    <Compile Include="F11A241F.cs" />
+    <Compile Include="F12CD282.cs" />
+    <Compile Include="F1AB7408.cs" />
+    <Compile Include="F1B1FD95.cs" />
+    <Compile Include="F20CF4B9.cs" />
+    <Compile Include="F2142E09.cs" />
+    <Compile Include="F2A3B231.cs" />
+    <Compile Include="F2AE9488.cs" />
+    <Compile Include="F2AEFD8A.cs" />
+    <Compile Include="F2BE0F00.cs" />
+    <Compile Include="F3951033.cs" />
+    <Compile Include="F3A59812.cs" />
+    <Compile Include="F3B02C8C.cs" />
+    <Compile Include="F48A640E.cs" />
+    <Compile Include="F49B88BB.cs" />
+    <Compile Include="F49D2A88.cs" />
+    <Compile Include="F4A6F60C.cs" />
+    <Compile Include="F4AEA109.cs" />
+    <Compile Include="F4B7F0B1.cs" />
+    <Compile Include="F5029193.cs" />
+    <Compile Include="F51A5E30.cs" />
+    <Compile Include="F51F1588.cs" />
+    <Compile Include="F526F117.cs" />
+    <Compile Include="F586F7A6.cs" />
+    <Compile Include="F58756B7.cs" />
+    <Compile Include="F5990320.cs" />
+    <Compile Include="F5B3B684.cs" />
+    <Compile Include="F5B554AF.cs" />
+    <Compile Include="F5BBA705.cs" />
+    <Compile Include="F5BE901E.cs" />
+    <Compile Include="F600E4B8.cs" />
+    <Compile Include="F6020313.cs" />
+    <Compile Include="F60D31B1.cs" />
+    <Compile Include="F615DC1C.cs" />
+    <Compile Include="F6224A28.cs" />
+    <Compile Include="F631ECB5.cs" />
+    <Compile Include="F6B8C298.cs" />
+    <Compile Include="F79CE40B.cs" />
+    <Compile Include="F8053C06.cs" />
+    <Compile Include="F8102C1E.cs" />
+    <Compile Include="F8187E06.cs" />
+    <Compile Include="F81CFB2B.cs" />
+    <Compile Include="F82F4F04.cs" />
+    <Compile Include="F89AD813.cs" />
+    <Compile Include="F99A4985.cs" />
+    <Compile Include="FA08B9B0.cs" />
+    <Compile Include="FA0E3E27.cs" />
+    <Compile Include="FA373936.cs" />
+    <Compile Include="FA813788.cs" />
+    <Compile Include="FAA68693.cs" />
+    <Compile Include="FAACEC27.cs" />
+    <Compile Include="FB13338E.cs" />
+    <Compile Include="FB1AF821.cs" />
+    <Compile Include="FB23F030.cs" />
+    <Compile Include="FB2F41A7.cs" />
+    <Compile Include="FB389107.cs" />
+    <Compile Include="FB8DAC03.cs" />
+    <Compile Include="FB989EB1.cs" />
+    <Compile Include="FC033589.cs" />
+    <Compile Include="FC047896.cs" />
+    <Compile Include="FC187826.cs" />
+    <Compile Include="FC1BF617.cs" />
+    <Compile Include="FC341D22.cs" />
+    <Compile Include="FC94479B.cs" />
+    <Compile Include="FCA0B12D.cs" />
+    <Compile Include="FCA24E20.cs" />
+    <Compile Include="FD035814.cs" />
+    <Compile Include="FD377232.cs" />
+    <Compile Include="FE001C2D.cs" />
+    <Compile Include="FE01350D.cs" />
+    <Compile Include="FE2A730C.cs" />
+    <Compile Include="FEA0382B.cs" />
+    <Compile Include="FF0133BC.cs" />
+    <Compile Include="FF05D01A.cs" />
+    <Compile Include="FF0EEB0A.cs" />
+    <Compile Include="FF15D6B0.cs" />
+    <Compile Include="FF326791.cs" />
+    <Compile Include="FFA1D1B2.cs" />
+    <Compile Include="G00934B6.cs" />
+    <Compile Include="G0143013.cs" />
+    <Compile Include="G02D7D13.cs" />
+    <Compile Include="G035F4A6.cs" />
+    <Compile Include="G039C03E.cs" />
+    <Compile Include="G03FE112.cs" />
+    <Compile Include="G10D5736.cs" />
+    <Compile Include="G12DA8A7.cs" />
+    <Compile Include="G1BA682F.cs" />
+    <Compile Include="G20C1D38.cs" />
+    <Compile Include="G221E6AF.cs" />
+    <Compile Include="G282632E.cs" />
+    <Compile Include="G28BCB18.cs" />
+    <Compile Include="G302712A.cs" />
+    <Compile Include="G31C1A9A.cs" />
+    <Compile Include="G322F131.cs" />
+    <Compile Include="G3840C84.cs" />
+    <Compile Include="G38CD01C.cs" />
+    <Compile Include="G3988D21.cs" />
+    <Compile Include="G3AC6E2B.cs" />
+    <Compile Include="G3BEFA07.cs" />
+    <Compile Include="G40A18A4.cs" />
+    <Compile Include="G415BDAA.cs" />
+    <Compile Include="G419B497.cs" />
+    <Compile Include="G425CE14.cs" />
+    <Compile Include="G4963711.cs" />
+    <Compile Include="G4A46D37.cs" />
+    <Compile Include="G4AB0697.cs" />
+    <Compile Include="G4B3E9BC.cs" />
+    <Compile Include="G50297A6.cs" />
+    <Compile Include="G506499F.cs" />
+    <Compile Include="G51233BD.cs" />
+    <Compile Include="G52B508E.cs" />
+    <Compile Include="G58D199F.cs" />
+    <Compile Include="G5952404.cs" />
+    <Compile Include="G5996A0D.cs" />
+    <Compile Include="G59C5294.cs" />
+    <Compile Include="G5AF2408.cs" />
+    <Compile Include="G5BD502E.cs" />
+    <Compile Include="G6803C08.cs" />
+    <Compile Include="G680C3B0.cs" />
+    <Compile Include="G681012F.cs" />
+    <Compile Include="G6A62080.cs" />
+    <Compile Include="G6B812BD.cs" />
+    <Compile Include="G700009E.cs" />
+    <Compile Include="G734389D.cs" />
+    <Compile Include="G73D789D.cs" />
+    <Compile Include="G7806F94.cs" />
+    <Compile Include="G7857639.cs" />
+    <Compile Include="G787523C.cs" />
+    <Compile Include="G79E5091.cs" />
+    <Compile Include="G815098C.cs" />
+    <Compile Include="G818A6A6.cs" />
+    <Compile Include="G925C51F.cs" />
+    <Compile Include="G92A74B1.cs" />
+    <Compile Include="G98F0B9B.cs" />
+    <Compile Include="G990C78D.cs" />
+    <Compile Include="G99661B2.cs" />
+    <Compile Include="G9A5BF05.cs" />
+    <Compile Include="GA105918.cs" />
+    <Compile Include="GA31B80D.cs" />
+    <Compile Include="GA8F75BE.cs" />
+    <Compile Include="GAAABBB0.cs" />
+    <Compile Include="GAAE28A0.cs" />
+    <Compile Include="GB2D0B80.cs" />
+    <Compile Include="GB325324.cs" />
+    <Compile Include="GB8BF8AE.cs" />
+    <Compile Include="GBA2ADA8.cs" />
+    <Compile Include="GC347B1B.cs" />
+    <Compile Include="GC828C1A.cs" />
+    <Compile Include="GC995805.cs" />
+    <Compile Include="GCAC8205.cs" />
+    <Compile Include="GCBDD11B.cs" />
+    <Compile Include="GD008532.cs" />
+    <Compile Include="GD0D780D.cs" />
+    <Compile Include="GD16319A.cs" />
+    <Compile Include="GD302201.cs" />
+    <Compile Include="GD8A193A.cs" />
+    <Compile Include="GD93C6AB.cs" />
+    <Compile Include="GD98E53A.cs" />
+    <Compile Include="GD9B6404.cs" />
+    <Compile Include="GE083417.cs" />
+    <Compile Include="GEB3232E.cs" />
+    <Compile Include="GF2BC009.cs" />
+    <Compile Include="GF2C9AAB.cs" />
+    <Compile Include="GF88B114.cs" />
+    <Compile Include="GF8E3D9A.cs" />
+    <Compile Include="GFAB84B7.cs" />
+    <Compile Include="H00E4429.cs" />
+    <Compile Include="H012BF26.cs" />
+    <Compile Include="H01F1BB1.cs" />
+    <Compile Include="H0A72792.cs" />
+    <Compile Include="H0AF4BA3.cs" />
+    <Compile Include="H105130F.cs" />
+    <Compile Include="H1106AA7.cs" />
+    <Compile Include="H18CB422.cs" />
+    <Compile Include="H18DD394.cs" />
+    <Compile Include="H19B7B2F.cs" />
+    <Compile Include="H19CCF83.cs" />
+    <Compile Include="H23AAE25.cs" />
+    <Compile Include="H28A1691.cs" />
+    <Compile Include="H28CE8B3.cs" />
+    <Compile Include="H2947CB8.cs" />
+    <Compile Include="H2B17DB9.cs" />
+    <Compile Include="H2BFEE90.cs" />
+    <Compile Include="H305D083.cs" />
+    <Compile Include="H3237617.cs" />
+    <Compile Include="H3A3160E.cs" />
+    <Compile Include="H3A97A0D.cs" />
+    <Compile Include="H40C0030.cs" />
+    <Compile Include="H43860BF.cs" />
+    <Compile Include="H439492D.cs" />
+    <Compile Include="H43E2431.cs" />
+    <Compile Include="H4A30121.cs" />
+    <Compile Include="H4AF2E29.cs" />
+    <Compile Include="H50E57B0.cs" />
+    <Compile Include="H50E8C96.cs" />
+    <Compile Include="H51E5981.cs" />
+    <Compile Include="H528639A.cs" />
+    <Compile Include="H52867B7.cs" />
+    <Compile Include="H53569B5.cs" />
+    <Compile Include="H5B14CA1.cs" />
+    <Compile Include="H635D115.cs" />
+    <Compile Include="H6A6E78C.cs" />
+    <Compile Include="H6AD6B25.cs" />
+    <Compile Include="H706D837.cs" />
+    <Compile Include="H718FA0C.cs" />
+    <Compile Include="H78A0A2F.cs" />
+    <Compile Include="H796B437.cs" />
+    <Compile Include="H7B23029.cs" />
+    <Compile Include="H8018A07.cs" />
+    <Compile Include="H83B6C1E.cs" />
+    <Compile Include="H887B297.cs" />
+    <Compile Include="H8A0A735.cs" />
+    <Compile Include="H8AE3510.cs" />
+    <Compile Include="H9085C39.cs" />
+    <Compile Include="H908DB0F.cs" />
+    <Compile Include="H929A11A.cs" />
+    <Compile Include="H92B5FBA.cs" />
+    <Compile Include="H988ACA7.cs" />
+    <Compile Include="HA0A8BBE.cs" />
+    <Compile Include="HA0ACF96.cs" />
+    <Compile Include="HA0C821C.cs" />
+    <Compile Include="HA8E4628.cs" />
+    <Compile Include="HAA4D30B.cs" />
+    <Compile Include="HAA62F0C.cs" />
+    <Compile Include="HAB245BE.cs" />
+    <Compile Include="HB9FDCBB.cs" />
+    <Compile Include="HBA55F8A.cs" />
+    <Compile Include="HBAA3793.cs" />
+    <Compile Include="HC8EC30E.cs" />
+    <Compile Include="HD1F7A39.cs" />
+    <Compile Include="HD31A72C.cs" />
+    <Compile Include="HD8D3997.cs" />
+    <Compile Include="HDB2AA9D.cs" />
+    <Compile Include="HDB7CE04.cs" />
+    <Compile Include="HDB8A79B.cs" />
+    <Compile Include="HE15D505.cs" />
+    <Compile Include="HE2AF73C.cs" />
+    <Compile Include="HE3521A2.cs" />
+    <Compile Include="HE82870D.cs" />
+    <Compile Include="HE953217.cs" />
+    <Compile Include="HEAFB217.cs" />
+    <Compile Include="HF051987.cs" />
+    <Compile Include="HF0D9B33.cs" />
+    <Compile Include="HF16A022.cs" />
+    <Compile Include="HF84FC81.cs" />
+    <Compile Include="HF857E88.cs" />
+    <Compile Include="HF859A89.cs" />
+    <Compile Include="HF9D1A0C.cs" />
+    <Compile Include="HFAC413E.cs" />
+    <Compile Include="HFB89500.cs" />
+    <Compile Include="I00BF691.cs" />
+    <Compile Include="I013E1B1.cs" />
+    <Compile Include="I0303811.cs" />
+    <Compile Include="I081511E.cs" />
+    <Compile Include="I09C1D30.cs" />
+    <Compile Include="I114ED32.cs" />
+    <Compile Include="I1165A0A.cs" />
+    <Compile Include="I1365089.cs" />
+    <Compile Include="I13D7A0C.cs" />
+    <Compile Include="I1918324.cs" />
+    <Compile Include="I192C721.cs" />
+    <Compile Include="I1B19505.cs" />
+    <Compile Include="I23EB2AD.cs" />
+    <Compile Include="I2A0B2BB.cs" />
+    <Compile Include="I2B2BB0D.cs" />
+    <Compile Include="I2BC0A0A.cs" />
+    <Compile Include="I315F7B4.cs" />
+    <Compile Include="I31B6CB6.cs" />
+    <Compile Include="I32F4115.cs" />
+    <Compile Include="I3376F04.cs" />
+    <Compile Include="I383E194.cs" />
+    <Compile Include="I39FDA9E.cs" />
+    <Compile Include="I3AB23A3.cs" />
+    <Compile Include="I422E396.cs" />
+    <Compile Include="I4377EA1.cs" />
+    <Compile Include="I4AF5D93.cs" />
+    <Compile Include="I500A38D.cs" />
+    <Compile Include="I514F92A.cs" />
+    <Compile Include="I51E15B8.cs" />
+    <Compile Include="I53F581D.cs" />
+    <Compile Include="I600C799.cs" />
+    <Compile Include="I62B481D.cs" />
+    <Compile Include="I726733A.cs" />
+    <Compile Include="I7969C0C.cs" />
+    <Compile Include="I7A29812.cs" />
+    <Compile Include="I7A48534.cs" />
+    <Compile Include="I803C135.cs" />
+    <Compile Include="I80ECD3F.cs" />
+    <Compile Include="I88C749C.cs" />
+    <Compile Include="I8994F84.cs" />
+    <Compile Include="I9176F87.cs" />
+    <Compile Include="I91F7C1D.cs" />
+    <Compile Include="I98131B4.cs" />
+    <Compile Include="I9AAC825.cs" />
+    <Compile Include="IA163B0E.cs" />
+    <Compile Include="IA20AB8E.cs" />
+    <Compile Include="IA8CEE13.cs" />
+    <Compile Include="IA8F1706.cs" />
+    <Compile Include="IAA33AB5.cs" />
+    <Compile Include="IB014E11.cs" />
+    <Compile Include="IB2B970F.cs" />
+    <Compile Include="IC151682.cs" />
+    <Compile Include="IC252626.cs" />
+    <Compile Include="IC88751F.cs" />
+    <Compile Include="IC964206.cs" />
+    <Compile Include="IC97A5A4.cs" />
+    <Compile Include="ICA5FE19.cs" />
+    <Compile Include="ICBBFE26.cs" />
+    <Compile Include="ID8763B2.cs" />
+    <Compile Include="ID887B86.cs" />
+    <Compile Include="ID9040B1.cs" />
+    <Compile Include="IDA164A7.cs" />
+    <Compile Include="IDB1222C.cs" />
+    <Compile Include="IDB6EA03.cs" />
+    <Compile Include="IDBB349C.cs" />
+    <Compile Include="IE11C729.cs" />
+    <Compile Include="IE29B632.cs" />
+    <Compile Include="IE37C6A0.cs" />
+    <Compile Include="IF1179A8.cs" />
+    <Compile Include="IF27D529.cs" />
+    <Compile Include="IF2DE03D.cs" />
+    <Compile Include="IF83778A.cs" />
+    <Compile Include="IF9463AF.cs" />
+    <Compile Include="IF98B9A7.cs" />
+    <Compile Include="IF9DB8B7.cs" />
+    <Compile Include="IFA3BA2E.cs" />
+    <Compile Include="InvertedBoolConverter.cs" />
+    <Compile Include="J0041033.cs" />
+    <Compile Include="J03B810D.cs" />
+    <Compile Include="J03F619B.cs" />
+    <Compile Include="J097CF1D.cs" />
+    <Compile Include="J0A49F2E.cs" />
+    <Compile Include="J1137C9A.cs" />
+    <Compile Include="J193A51B.cs" />
+    <Compile Include="J1A679A8.cs" />
+    <Compile Include="J1B58ABE.cs" />
+    <Compile Include="J2157408.cs" />
+    <Compile Include="J21BBD3A.cs" />
+    <Compile Include="J22091A9.cs" />
+    <Compile Include="J23E0AA3.cs" />
+    <Compile Include="J28FBF27.cs" />
+    <Compile Include="J2A73DAC.cs" />
+    <Compile Include="J2B3378F.cs" />
+    <Compile Include="J2BB8732.cs" />
+    <Compile Include="J301919D.cs" />
+    <Compile Include="J306BC3D.cs" />
+    <Compile Include="J30777AB.cs" />
+    <Compile Include="J30FA422.cs" />
+    <Compile Include="J31E6F8A.cs" />
+    <Compile Include="J31F1B9A.cs" />
+    <Compile Include="J38FA281.cs" />
+    <Compile Include="J39A4A2E.cs" />
+    <Compile Include="J3A12CB2.cs" />
+    <Compile Include="J3BCD011.cs" />
+    <Compile Include="J4033A2A.cs" />
+    <Compile Include="J42659A1.cs" />
+    <Compile Include="J48731B7.cs" />
+    <Compile Include="J514AD84.cs" />
+    <Compile Include="J517DA38.cs" />
+    <Compile Include="J51C131D.cs" />
+    <Compile Include="J537F986.cs" />
+    <Compile Include="J58534AF.cs" />
+    <Compile Include="J613A9B4.cs" />
+    <Compile Include="J62B433D.cs" />
+    <Compile Include="J6973F37.cs" />
+    <Compile Include="J6BDEF89.cs" />
+    <Compile Include="J70DDE39.cs" />
+    <Compile Include="J73ACF2B.cs" />
+    <Compile Include="J7A49194.cs" />
+    <Compile Include="J7AAD4BC.cs" />
+    <Compile Include="J7B43304.cs" />
+    <Compile Include="J7BCC203.cs" />
+    <Compile Include="J8129C01.cs" />
+    <Compile Include="J82D231A.cs" />
+    <Compile Include="J8308789.cs" />
+    <Compile Include="J830892E.cs" />
+    <Compile Include="J8980307.cs" />
+    <Compile Include="J8A3E402.cs" />
+    <Compile Include="J8AC1988.cs" />
+    <Compile Include="J8B4108C.cs" />
+    <Compile Include="J8B7712B.cs" />
+    <Compile Include="J9146BB3.cs" />
+    <Compile Include="J934133F.cs" />
+    <Compile Include="J93EAFB9.cs" />
+    <Compile Include="J98EDD92.cs" />
+    <Compile Include="J99F6530.cs" />
+    <Compile Include="J9AC6B9F.cs" />
+    <Compile Include="JA12D4B2.cs" />
+    <Compile Include="JA12F526.cs" />
+    <Compile Include="JA2B6D9E.cs" />
+    <Compile Include="JA3595A8.cs" />
+    <Compile Include="JAB02D2C.cs" />
+    <Compile Include="JB04441E.cs" />
+    <Compile Include="JB1381B9.cs" />
+    <Compile Include="JB2013BC.cs" />
+    <Compile Include="JB2E380E.cs" />
+    <Compile Include="JB34AF14.cs" />
+    <Compile Include="JB92A4B0.cs" />
+    <Compile Include="JBA14D34.cs" />
+    <Compile Include="JBBD5802.cs" />
+    <Compile Include="JC012E8B.cs" />
+    <Compile Include="JC0F3635.cs" />
+    <Compile Include="JC11021F.cs" />
+    <Compile Include="JC29B71F.cs" />
+    <Compile Include="JC2FA72C.cs" />
+    <Compile Include="JC8EB12A.cs" />
+    <Compile Include="JCADE9BB.cs" />
+    <Compile Include="JCB2592F.cs" />
+    <Compile Include="JCBC63BF.cs" />
+    <Compile Include="JD06799C.cs" />
+    <Compile Include="JD078D1D.cs" />
+    <Compile Include="JD11D633.cs" />
+    <Compile Include="JD12902A.cs" />
+    <Compile Include="JD19DB38.cs" />
+    <Compile Include="JD29AEAF.cs" />
+    <Compile Include="JD36502A.cs" />
+    <Compile Include="JDAB9A90.cs" />
+    <Compile Include="JDB88CB2.cs" />
+    <Compile Include="JE36C8BF.cs" />
+    <Compile Include="JF0DA905.cs" />
+    <Compile Include="JF11D636.cs" />
+    <Compile Include="JF1A3631.cs" />
+    <Compile Include="JF36472D.cs" />
+    <Compile Include="JF9578B7.cs" />
+    <Compile Include="JFA32A08.cs" />
+    <Compile Include="JFBF4310.cs" />
+    <Compile Include="K006461B.cs" />
+    <Compile Include="K09B3C8D.cs" />
+    <Compile Include="K0B5621D.cs" />
+    <Compile Include="K0BEB824.cs" />
+    <Compile Include="K1088AA3.cs" />
+    <Compile Include="K11DFF8C.cs" />
+    <Compile Include="K122B193.cs" />
+    <Compile Include="K1A84ABE.cs" />
+    <Compile Include="K205C135.cs" />
+    <Compile Include="K206AD9A.cs" />
+    <Compile Include="K212AFA9.cs" />
+    <Compile Include="K214B209.cs" />
+    <Compile Include="K2B8A928.cs" />
+    <Compile Include="K392480F.cs" />
+    <Compile Include="K394E73E.cs" />
+    <Compile Include="K3B2F78E.cs" />
+    <Compile Include="K40A7639.cs" />
+    <Compile Include="K41AFEAE.cs" />
+    <Compile Include="K42D03B0.cs" />
+    <Compile Include="K490070F.cs" />
+    <Compile Include="K4A90937.cs" />
+    <Compile Include="K4B056BC.cs" />
+    <Compile Include="K4B98A3E.cs" />
+    <Compile Include="K4BE380F.cs" />
+    <Compile Include="K50E699E.cs" />
+    <Compile Include="K5275D21.cs" />
+    <Compile Include="K6161A85.cs" />
+    <Compile Include="K68C7F81.cs" />
+    <Compile Include="K6BDCCBA.cs" />
+    <Compile Include="K705710E.cs" />
+    <Compile Include="K70A4F11.cs" />
+    <Compile Include="K70B1428.cs" />
+    <Compile Include="K7B1FFBA.cs" />
+    <Compile Include="K802D59A.cs" />
+    <Compile Include="K88DDB20.cs" />
+    <Compile Include="K9063D95.cs" />
+    <Compile Include="K910F78A.cs" />
+    <Compile Include="K985121A.cs" />
+    <Compile Include="K99147AA.cs" />
+    <Compile Include="K9922A01.cs" />
+    <Compile Include="K9A0A500.cs" />
+    <Compile Include="K9B6ABBA.cs" />
+    <Compile Include="KA20541D.cs" />
+    <Compile Include="KA91070E.cs" />
+    <Compile Include="KA967E9A.cs" />
+    <Compile Include="KA9DE619.cs" />
+    <Compile Include="KAABB09E.cs" />
+    <Compile Include="KB16FB2C.cs" />
+    <Compile Include="KB3F5213.cs" />
+    <Compile Include="KB80ED16.cs" />
+    <Compile Include="KBA2AB20.cs" />
+    <Compile Include="KBBE969B.cs" />
+    <Compile Include="KC03F3AF.cs" />
+    <Compile Include="KC088715.cs" />
+    <Compile Include="KC0BC31C.cs" />
+    <Compile Include="KC1E07B9.cs" />
+    <Compile Include="KC345893.cs" />
+    <Compile Include="KC8F972B.cs" />
+    <Compile Include="KC9C8C9B.cs" />
+    <Compile Include="KC9CBA95.cs" />
+    <Compile Include="KCB493AA.cs" />
+    <Compile Include="KD071495.cs" />
+    <Compile Include="KDB8D816.cs" />
+    <Compile Include="KE0E73BA.cs" />
+    <Compile Include="KE38E532.cs" />
+    <Compile Include="KE3B20B6.cs" />
+    <Compile Include="KE9376B5.cs" />
+    <Compile Include="KF1F4A90.cs" />
+    <Compile Include="KF22C6AE.cs" />
+    <Compile Include="KFBE4C0C.cs" />
+    <Compile Include="L01310B3.cs" />
+    <Compile Include="L01A4616.cs" />
+    <Compile Include="L083B68C.cs" />
+    <Compile Include="L0A460BE.cs" />
+    <Compile Include="L0BE8811.cs" />
+    <Compile Include="L10E00A3.cs" />
+    <Compile Include="L125B188.cs" />
+    <Compile Include="L12CEDA9.cs" />
+    <Compile Include="L184393A.cs" />
+    <Compile Include="L1A02626.cs" />
+    <Compile Include="L1A97F3F.cs" />
+    <Compile Include="L1B04528.cs" />
+    <Compile Include="L1B21084.cs" />
+    <Compile Include="L20BDA08.cs" />
+    <Compile Include="L21A4424.cs" />
+    <Compile Include="L2965D05.cs" />
+    <Compile Include="L2BF7107.cs" />
+    <Compile Include="L3117124.cs" />
+    <Compile Include="L32E9424.cs" />
+    <Compile Include="L3A83316.cs" />
+    <Compile Include="L40AFBBB.cs" />
+    <Compile Include="L416C515.cs" />
+    <Compile Include="L431FFAB.cs" />
+    <Compile Include="L4333035.cs" />
+    <Compile Include="L4A16196.cs" />
+    <Compile Include="L4A79D2F.cs" />
+    <Compile Include="L4AC5399.cs" />
+    <Compile Include="L4B049B5.cs" />
+    <Compile Include="L503DCB7.cs" />
+    <Compile Include="L50C7638.cs" />
+    <Compile Include="L52007B6.cs" />
+    <Compile Include="L520D7AD.cs" />
+    <Compile Include="L521BA2D.cs" />
+    <Compile Include="L627F792.cs" />
+    <Compile Include="L634319A.cs" />
+    <Compile Include="L6944612.cs" />
+    <Compile Include="L6A3CF37.cs" />
+    <Compile Include="L6B95732.cs" />
+    <Compile Include="L7167227.cs" />
+    <Compile Include="L71A34A4.cs" />
+    <Compile Include="L71CF2B8.cs" />
+    <Compile Include="L7241403.cs" />
+    <Compile Include="L72D8212.cs" />
+    <Compile Include="L730491C.cs" />
+    <Compile Include="L7900FBE.cs" />
+    <Compile Include="L83C6B32.cs" />
+    <Compile Include="L88A4B13.cs" />
+    <Compile Include="L88CE7B5.cs" />
+    <Compile Include="L8B4F71E.cs" />
+    <Compile Include="L9046932.cs" />
+    <Compile Include="L906C01C.cs" />
+    <Compile Include="L91BA61B.cs" />
+    <Compile Include="L9AD549E.cs" />
+    <Compile Include="LAA57600.cs" />
+    <Compile Include="LABF6EB8.cs" />
+    <Compile Include="LC06BDA7.cs" />
+    <Compile Include="LC85799B.cs" />
+    <Compile Include="LD10EBAA.cs" />
+    <Compile Include="LD1D3D23.cs" />
+    <Compile Include="LD89C03E.cs" />
+    <Compile Include="LDA71F0C.cs" />
+    <Compile Include="LE03B404.cs" />
+    <Compile Include="LE155696.cs" />
+    <Compile Include="LE9F9302.cs" />
+    <Compile Include="LEB40F3C.cs" />
+    <Compile Include="LF07C209.cs" />
+    <Compile Include="LF1434AF.cs" />
+    <Compile Include="LF358704.cs" />
+    <Compile Include="LF35E1A6.cs" />
+    <Compile Include="LF37C4A0.cs" />
+    <Compile Include="LF3C2F27.cs" />
+    <Compile Include="LF3F8C03.cs" />
+    <Compile Include="LF8C343E.cs" />
+    <Compile Include="LF97A8BF.cs" />
+    <Compile Include="M00894A1.cs" />
+    <Compile Include="M01DF22D.cs" />
+    <Compile Include="M08AAF31.cs" />
+    <Compile Include="M08C2E94.cs" />
+    <Compile Include="M09DA293.cs" />
+    <Compile Include="M0A55713.cs" />
+    <Compile Include="M10B9B8B.cs" />
+    <Compile Include="M1110BA1.cs" />
+    <Compile Include="M1238D35.cs" />
+    <Compile Include="M1A6E084.cs" />
+    <Compile Include="M20B2738.cs" />
+    <Compile Include="M2135B15.cs" />
+    <Compile Include="M219B237.cs" />
+    <Compile Include="M21E7E34.cs" />
+    <Compile Include="M2258CB9.cs" />
+    <Compile Include="M22F3628.cs" />
+    <Compile Include="M2816614.cs" />
+    <Compile Include="M2862AB2.cs" />
+    <Compile Include="M3122782.cs" />
+    <Compile Include="M31DB621.cs" />
+    <Compile Include="M3262F21.cs" />
+    <Compile Include="M333402E.cs" />
+    <Compile Include="M3A41DB0.cs" />
+    <Compile Include="M3B64E24.cs" />
+    <Compile Include="M413C634.cs" />
+    <Compile Include="M42C1509.cs" />
+    <Compile Include="M432229F.cs" />
+    <Compile Include="M484F8A6.cs" />
+    <Compile Include="M48D5E9A.cs" />
+    <Compile Include="M503C5A5.cs" />
+    <Compile Include="M50D922B.cs" />
+    <Compile Include="M5143980.cs" />
+    <Compile Include="M5238399.cs" />
+    <Compile Include="M528673E.cs" />
+    <Compile Include="M5AADD9F.cs" />
+    <Compile Include="M5B6D0A7.cs" />
+    <Compile Include="M6198E2D.cs" />
+    <Compile Include="M63EBE0E.cs" />
+    <Compile Include="M706E032.cs" />
+    <Compile Include="M707319B.cs" />
+    <Compile Include="M732D1B7.cs" />
+    <Compile Include="M73F4C95.cs" />
+    <Compile Include="M789F415.cs" />
+    <Compile Include="M7913631.cs" />
+    <Compile Include="M79E7DAA.cs" />
+    <Compile Include="M7A18038.cs" />
+    <Compile Include="M7A5CB2E.cs" />
+    <Compile Include="M81D58A4.cs" />
+    <Compile Include="M890278B.cs" />
+    <Compile Include="M8976532.cs" />
+    <Compile Include="M89A9407.cs" />
+    <Compile Include="M90DAD20.cs" />
+    <Compile Include="M90EC5B7.cs" />
+    <Compile Include="M93E5E9F.cs" />
+    <Compile Include="M9A1009E.cs" />
+    <Compile Include="M9A18B88.cs" />
+    <Compile Include="M9ACD00F.cs" />
+    <Compile Include="MA191AB4.cs" />
+    <Compile Include="MA2F83BD.cs" />
+    <Compile Include="MA302894.cs" />
+    <Compile Include="MA80A085.cs" />
+    <Compile Include="MA877E94.cs" />
+    <Compile Include="MAA9621A.cs" />
+    <Compile Include="MABE489E.cs" />
+    <Compile Include="MABFDCAB.cs" />
+    <Compile Include="MB032099.cs" />
+    <Compile Include="MB16D237.cs" />
+    <Compile Include="MB25639A.cs" />
+    <Compile Include="MB8240B8.cs" />
+    <Compile Include="MB8A120C.cs" />
+    <Compile Include="MB8B9B17.cs" />
+    <Compile Include="MB90BCB3.cs" />
+    <Compile Include="MBA1B62C.cs" />
+    <Compile Include="MC0E629A.cs" />
+    <Compile Include="MC0F8A9F.cs" />
+    <Compile Include="MC26F831.cs" />
+    <Compile Include="MD0AB1B0.cs" />
+    <Compile Include="MD1081B7.cs" />
+    <Compile Include="MD185E2C.cs" />
+    <Compile Include="MD2D84B4.cs" />
+    <Compile Include="MD2FF118.cs" />
+    <Compile Include="MD849409.cs" />
+    <Compile Include="MD8593BF.cs" />
+    <Compile Include="MDB2B529.cs" />
+    <Compile Include="ME31FF8D.cs" />
+    <Compile Include="ME39B237.cs" />
+    <Compile Include="ME9CB519.cs" />
+    <Compile Include="MEA66B3C.cs" />
+    <Compile Include="MEBDF995.cs" />
+    <Compile Include="MF0D0FB1.cs" />
+    <Compile Include="MF18A734.cs" />
+    <Compile Include="MF359A0E.cs" />
+    <Compile Include="MF972824.cs" />
+    <Compile Include="MFAA07A7.cs" />
+    <Compile Include="MFAF67BB.cs" />
+    <Compile Include="MFB877A3.cs" />
+    <Compile Include="N02EA71A.cs" />
+    <Compile Include="N0343935.cs" />
+    <Compile Include="N0A9ABB4.cs" />
+    <Compile Include="N104ABB2.cs" />
+    <Compile Include="N1316E93.cs" />
+    <Compile Include="N183E2B9.cs" />
+    <Compile Include="N1AB6E31.cs" />
+    <Compile Include="N1AF33BA.cs" />
+    <Compile Include="N200A684.cs" />
+    <Compile Include="N2389A30.cs" />
+    <Compile Include="N2933499.cs" />
+    <Compile Include="N29EB3AD.cs" />
+    <Compile Include="N2A40DAA.cs" />
+    <Compile Include="N2B34091.cs" />
+    <Compile Include="N2BCF1A9.cs" />
+    <Compile Include="N2BD6C28.cs" />
+    <Compile Include="N32A0A2E.cs" />
+    <Compile Include="N40606B3.cs" />
+    <Compile Include="N4102690.cs" />
+    <Compile Include="N42EAC14.cs" />
+    <Compile Include="N490A51A.cs" />
+    <Compile Include="N4AA191F.cs" />
+    <Compile Include="N4BBCE9C.cs" />
+    <Compile Include="N5858336.cs" />
+    <Compile Include="N58C6C25.cs" />
+    <Compile Include="N5A0C2AA.cs" />
+    <Compile Include="N5BAB9B8.cs" />
+    <Compile Include="N61196A7.cs" />
+    <Compile Include="N62EB38A.cs" />
+    <Compile Include="N7060CAF.cs" />
+    <Compile Include="N70E48BF.cs" />
+    <Compile Include="N71F8009.cs" />
+    <Compile Include="N7842F35.cs" />
+    <Compile Include="N8134BB3.cs" />
+    <Compile Include="N8265382.cs" />
+    <Compile Include="N834619A.cs" />
+    <Compile Include="N885FB89.cs" />
+    <Compile Include="N8A10E91.cs" />
+    <Compile Include="N8B9D99E.cs" />
+    <Compile Include="N9097000.cs" />
+    <Compile Include="N9370AB7.cs" />
+    <Compile Include="N98A9FA1.cs" />
+    <Compile Include="N9A9A4AA.cs" />
+    <Compile Include="NA107D9B.cs" />
+    <Compile Include="NA2E4AA1.cs" />
+    <Compile Include="NAAF43A1.cs" />
+    <Compile Include="NAB6E2A4.cs" />
+    <Compile Include="NB1A9E0B.cs" />
+    <Compile Include="NB3D98A2.cs" />
+    <Compile Include="NB9A40AC.cs" />
+    <Compile Include="NBB10309.cs" />
+    <Compile Include="NC09FC33.cs" />
+    <Compile Include="NC0D0626.cs" />
+    <Compile Include="NC1404A9.cs" />
+    <Compile Include="NC1DBD26.cs" />
+    <Compile Include="NC2432A5.cs" />
+    <Compile Include="NCA46E99.cs" />
+    <Compile Include="ND1CA726.cs" />
+    <Compile Include="NE125596.cs" />
+    <Compile Include="NE875535.cs" />
+    <Compile Include="NE8EE130.cs" />
+    <Compile Include="NF0F7F30.cs" />
+    <Compile Include="NF836C31.cs" />
+    <Compile Include="NF861AAF.cs" />
+    <Compile Include="NF9D468C.cs" />
+    <Compile Include="O00E9AA5.cs" />
+    <Compile Include="O00EC4B9.cs" />
+    <Compile Include="O011C40B.cs" />
+    <Compile Include="O011D4B9.cs" />
+    <Compile Include="O01E7207.cs" />
+    <Compile Include="O09E5684.cs" />
+    <Compile Include="O107E032.cs" />
+    <Compile Include="O1179BA0.cs" />
+    <Compile Include="O11AF32D.cs" />
+    <Compile Include="O19FD31C.cs" />
+    <Compile Include="O20A4039.cs" />
+    <Compile Include="O28D8C21.cs" />
+    <Compile Include="O2A03391.cs" />
+    <Compile Include="O2ACE89F.cs" />
+    <Compile Include="O2BD5CB8.cs" />
+    <Compile Include="O308EA34.cs" />
+    <Compile Include="O326C490.cs" />
+    <Compile Include="O38B19AB.cs" />
+    <Compile Include="O3AE110F.cs" />
+    <Compile Include="O3AEBEB9.cs" />
+    <Compile Include="O3B9632B.cs" />
+    <Compile Include="O40A6609.cs" />
+    <Compile Include="O40F501F.cs" />
+    <Compile Include="O4129192.cs" />
+    <Compile Include="O42EAC9D.cs" />
+    <Compile Include="O48026B8.cs" />
+    <Compile Include="O489F13D.cs" />
+    <Compile Include="O48C5BB1.cs" />
+    <Compile Include="O4AC3EB2.cs" />
+    <Compile Include="O4AE0E90.cs" />
+    <Compile Include="O506F406.cs" />
+    <Compile Include="O50C4031.cs" />
+    <Compile Include="O51F2F9C.cs" />
+    <Compile Include="O521C407.cs" />
+    <Compile Include="O5A50E0C.cs" />
+    <Compile Include="O60B9089.cs" />
+    <Compile Include="O60DA02E.cs" />
+    <Compile Include="O63A6EAA.cs" />
+    <Compile Include="O6991397.cs" />
+    <Compile Include="O69BB034.cs" />
+    <Compile Include="O6BD6A3F.cs" />
+    <Compile Include="O731259F.cs" />
+    <Compile Include="O73CB4B6.cs" />
+    <Compile Include="O8258311.cs" />
+    <Compile Include="O9100693.cs" />
+    <Compile Include="O916BCA9.cs" />
+    <Compile Include="O92E7D12.cs" />
+    <Compile Include="O9361C84.cs" />
+    <Compile Include="O93F7822.cs" />
+    <Compile Include="O997863C.cs" />
+    <Compile Include="O9A81F0C.cs" />
+    <Compile Include="O9B6FE09.cs" />
+    <Compile Include="O9BE4BB2.cs" />
+    <Compile Include="OAA1490A.cs" />
+    <Compile Include="OB014128.cs" />
+    <Compile Include="OB8F1816.cs" />
+    <Compile Include="OC0ABABE.cs" />
+    <Compile Include="OC0DA385.cs" />
+    <Compile Include="OC0E3B2B.cs" />
+    <Compile Include="OD0217A5.cs" />
+    <Compile Include="OD07B821.cs" />
+    <Compile Include="OD08E83C.cs" />
+    <Compile Include="OD274A30.cs" />
+    <Compile Include="ODB9C43B.cs" />
+    <Compile Include="OE2A7288.cs" />
+    <Compile Include="OE2D4C19.cs" />
+    <Compile Include="OE90903C.cs" />
+    <Compile Include="OE9AAE85.cs" />
+    <Compile Include="OEA3222E.cs" />
+    <Compile Include="OEAB291E.cs" />
+    <Compile Include="OEBAAF16.cs" />
+    <Compile Include="OF391884.cs" />
+    <Compile Include="OF97C800.cs" />
+    <Compile Include="OFA19E0C.cs" />
+    <Compile Include="OFB27E04.cs" />
+    <Compile Include="OFBC360A.cs" />
+    <Compile Include="P007EC93.cs" />
+    <Compile Include="P014A082.cs" />
+    <Compile Include="P037AE14.cs" />
+    <Compile Include="P0886190.cs" />
+    <Compile Include="P09921A0.cs" />
+    <Compile Include="P0B3652E.cs" />
+    <Compile Include="P11BC508.cs" />
+    <Compile Include="P1889D02.cs" />
+    <Compile Include="P191F712.cs" />
+    <Compile Include="P1A9E41A.cs" />
+    <Compile Include="P1B0DD1B.cs" />
+    <Compile Include="P210CA80.cs" />
+    <Compile Include="P224D2A9.cs" />
+    <Compile Include="P23D0107.cs" />
+    <Compile Include="P23EBD9F.cs" />
+    <Compile Include="P28EF63D.cs" />
+    <Compile Include="P29669B2.cs" />
+    <Compile Include="P2B15F0B.cs" />
+    <Compile Include="P2B8029A.cs" />
+    <Compile Include="P2B8E68F.cs" />
+    <Compile Include="P32EF988.cs" />
+    <Compile Include="P3850601.cs" />
+    <Compile Include="P3AB6F0D.cs" />
+    <Compile Include="P3B3AA8A.cs" />
+    <Compile Include="P4076FB9.cs" />
+    <Compile Include="P409E28E.cs" />
+    <Compile Include="P41DE232.cs" />
+    <Compile Include="P424063A.cs" />
+    <Compile Include="P4258EBF.cs" />
+    <Compile Include="P43548BA.cs" />
+    <Compile Include="P4956B89.cs" />
+    <Compile Include="P49B98BC.cs" />
+    <Compile Include="P4BEA32B.cs" />
+    <Compile Include="P506988F.cs" />
+    <Compile Include="P5252C33.cs" />
+    <Compile Include="P53AA708.cs" />
+    <Compile Include="P5827029.cs" />
+    <Compile Include="P58E8907.cs" />
+    <Compile Include="P61DC398.cs" />
+    <Compile Include="P629D534.cs" />
+    <Compile Include="P6854E2F.cs" />
+    <Compile Include="P688A937.cs" />
+    <Compile Include="P6A19882.cs" />
+    <Compile Include="P6A95CB5.cs" />
+    <Compile Include="P6ABF4B9.cs" />
+    <Compile Include="P6AF212A.cs" />
+    <Compile Include="P70AF528.cs" />
+    <Compile Include="P71F2D18.cs" />
+    <Compile Include="P722882E.cs" />
+    <Compile Include="P72912B9.cs" />
+    <Compile Include="P7930127.cs" />
+    <Compile Include="P7A796B3.cs" />
+    <Compile Include="P7BFD394.cs" />
+    <Compile Include="P82AAD85.cs" />
+    <Compile Include="P82EE13A.cs" />
+    <Compile Include="P831880E.cs" />
+    <Compile Include="P83431AE.cs" />
+    <Compile Include="P880B12A.cs" />
+    <Compile Include="P88D55AA.cs" />
+    <Compile Include="P89DD825.cs" />
+    <Compile Include="P8B01F36.cs" />
+    <Compile Include="P902EE86.cs" />
+    <Compile Include="P92DCDBA.cs" />
+    <Compile Include="P982C4AD.cs" />
+    <Compile Include="P983C7A5.cs" />
+    <Compile Include="P9BC1CBC.cs" />
+    <Compile Include="P9BE7839.cs" />
+    <Compile Include="PA03E8A0.cs" />
+    <Compile Include="PA0D6988.cs" />
+    <Compile Include="PA175D82.cs" />
+    <Compile Include="PA1F88A0.cs" />
+    <Compile Include="PA29453B.cs" />
+    <Compile Include="PA9DA4B3.cs" />
+    <Compile Include="PAAE5787.cs" />
+    <Compile Include="PAB8E7AF.cs" />
+    <Compile Include="PABE798D.cs" />
+    <Compile Include="PB3056B8.cs" />
+    <Compile Include="PB88B922.cs" />
+    <Compile Include="PBBF66BC.cs" />
+    <Compile Include="PC10141D.cs" />
+    <Compile Include="PC1B6C31.cs" />
+    <Compile Include="PC312F1C.cs" />
+    <Compile Include="PC82CB96.cs" />
+    <Compile Include="PC8CBE26.cs" />
+    <Compile Include="PC9F8895.cs" />
+    <Compile Include="PD0FB6B4.cs" />
+    <Compile Include="PD106D96.cs" />
+    <Compile Include="PD148C8C.cs" />
+    <Compile Include="PD8A1D3A.cs" />
+    <Compile Include="PD8B820E.cs" />
+    <Compile Include="PD942117.cs" />
+    <Compile Include="PE1A01A5.cs" />
+    <Compile Include="PE2868AA.cs" />
+    <Compile Include="PE36C7B1.cs" />
+    <Compile Include="PE8C0C9E.cs" />
+    <Compile Include="PE90EBA3.cs" />
+    <Compile Include="PE93B8B1.cs" />
+    <Compile Include="PE9977A3.cs" />
+    <Compile Include="PE99900F.cs" />
+    <Compile Include="PE9F461F.cs" />
+    <Compile Include="PEA3C43D.cs" />
+    <Compile Include="PEB8C700.cs" />
+    <Compile Include="PF0C0E9E.cs" />
+    <Compile Include="PF2FC480.cs" />
+    <Compile Include="PF3BB8AA.cs" />
+    <Compile Include="PF93099B.cs" />
+    <Compile Include="PF991610.cs" />
+    <Compile Include="PFA3FCA8.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regAppRegistor\AppRegister.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="RustTweakerViewModel.cs" />
+    <Compile Include="RustTweaker\Logger.cs" />
+    <Compile Include="RustTweaker\Model\Configs.cs" />
+    <Compile Include="RustTweaker\Model\RuntimeChecks.cs" />
+    <Compile Include="RustTweaker\Model\Statistic.cs" />
+    <Compile Include="RustTweaker\Model\StorageSchema.cs" />
+    <Compile Include="RustTweaker\Model\WebAppStorage.cs" />
+    <Compile Include="RustTweaker\Optimization\ASPMValue.cs" />
+    <Compile Include="RustTweaker\Optimization\AutoGcBuffer.cs" />
+    <Compile Include="RustTweaker\Optimization\Backups.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableDRTP.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableDRTPInfo.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableHAGS.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableHVCI.cs" />
+    <Compile Include="RustTweaker\Optimization\DisablePciLpm.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableUnusedServices.cs" />
+    <Compile Include="RustTweaker\Optimization\DisableXboxGameBarOptimization.cs" />
+    <Compile Include="RustTweaker\Optimization\EnableGameModeOptimization.cs" />
+    <Compile Include="RustTweaker\Optimization\IOptimization.cs" />
+    <Compile Include="RustTweaker\Optimization\Monitoring\Disk.cs" />
+    <Compile Include="RustTweaker\Optimization\Monitoring\IMonitoring.cs" />
+    <Compile Include="RustTweaker\Optimization\Monitoring\MonitoringBenchmarkClient.cs" />
+    <Compile Include="RustTweaker\Optimization\Monitoring\Ram.cs" />
+    <Compile Include="RustTweaker\Optimization\Monitoring\Temperature.cs" />
+    <Compile Include="RustTweaker\Optimization\OptimizationId.cs" />
+    <Compile Include="RustTweaker\Optimization\OptimizationOriginalStateStore.cs" />
+    <Compile Include="RustTweaker\Optimization\OptimizationStatus.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\AutoCpuAffinity.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\CpuAffinityRecommendation.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\CpuTopologyReader.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\L3CacheGroupInfo.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\LogicalCpu.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\AutoCpuAffinity\LogicalProcessorL3CacheInfo.cs" />
+    <Compile Include="RustTweaker\Optimization\Optimizations\DisableExclusiveFullscreen.cs" />
+    <Compile Include="RustTweaker\Optimization\OptimizationTargetStatus.cs" />
+    <Compile Include="RustTweaker\Optimization\PagefileDTO.cs" />
+    <Compile Include="RustTweaker\Optimization\PagefileOptimization.cs" />
+    <Compile Include="RustTweaker\Optimization\RestorePointDTO.cs" />
+    <Compile Include="RustTweaker\Optimization\ServiceConfig.cs" />
+    <Compile Include="RustTweaker\Optimization\ServiceInfoDTO.cs" />
+    <Compile Include="RustTweaker\Optimization\ServiceStartupType.cs" />
+    <Compile Include="RustTweaker\Optimization\WindowsPowerPlan.cs" />
+    <Compile Include="RustTweaker\PowershellTools.cs" />
+    <Compile Include="RustTweaker\Properties\Resources.cs" />
+    <Compile Include="RustTweaker\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RustTweaker\SystemInformer.cs" />
+    <Compile Include="RustTweaker_NET\Model\Http\ResponseCache.cs" />
+    <Compile Include="RustTweaker_NET\Services\BenchmarkBackupRecovery.cs" />
+    <Compile Include="RustTweaker_NET\Services\BenchmarkIpcServer.cs" />
+    <Compile Include="RustTweaker_NET\ViewModel\Optimizations\OptimizationInfoDto.cs" />
+    <Compile Include="RustTweaker_NET\ViewModel\Optimizations\Optimizations.cs" />
+    <Compile Include="SteamAccount.cs" />
+    <Compile Include="SteamGameSearcher\FileSystemService.cs" />
+    <Compile Include="SteamGameSearcher\IFileSystemService.cs" />
+    <Compile Include="SteamGameSearcher\InstalledGame.cs" />
+    <Compile Include="SteamGameSearcher\ISteamGameLocator.cs" />
+    <Compile Include="SteamGameSearcher\ISteamPathResolver.cs" />
+    <Compile Include="SteamGameSearcher\MainLogic.cs" />
+    <Compile Include="SteamGameSearcher\SteamConstants.cs" />
+    <Compile Include="SteamGameSearcher\SteamGameLocator.cs" />
+    <Compile Include="SteamGameSearcher\SteamPathResolver.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="WpfApp1\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\JsBridge.cs" />
+    <Compile Include="WpfApp1\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Model\AppExceptions.cs" />
+    <Compile Include="WpfApp1\Model\Auth.cs" />
+    <Compile Include="WpfApp1\Model\AuthGuard.cs" />
+    <Compile Include="WpfApp1\Model\AuthResponse.cs" />
+    <Compile Include="WpfApp1\Model\BadParams.cs" />
+    <Compile Include="WpfApp1\Model\Controller.cs" />
+    <Compile Include="WpfApp1\Model\CoreHelper.cs" />
+    <Compile Include="WpfApp1\Model\FileActions.cs" />
+    <Compile Include="WpfApp1\Model\FileDoesNotExist.cs" />
+    <Compile Include="WpfApp1\Model\FileNotAccessible.cs" />
+    <Compile Include="WpfApp1\Model\HardwareId.cs" />
+    <Compile Include="WpfApp1\Model\HwidResponse.cs" />
+    <Compile Include="WpfApp1\Model\IntegrityCheck.cs" />
+    <Compile Include="WpfApp1\Model\MainLogic.cs" />
+    <Compile Include="WpfApp1\Model\Params.cs" />
+    <Compile Include="WpfApp1\Model\Response.cs" />
+    <Compile Include="WpfApp1\Model\SecureHttp.cs" />
+    <Compile Include="WpfApp1\Model\SecureStrings.cs" />
+    <Compile Include="WpfApp1\Model\UserDto.cs" />
+    <Compile Include="WpfApp1\StartupSplashWindow.cs" />
+    <Compile Include="wpf_webview2_v4_8\LoadinModal.xaml.cs">
+      <DependentUpon>LoadinModal.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RustTweaker_NET\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="RustTweaker\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="WpfApp1\App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WpfApp1\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfApp1\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpf_webview2_v4_8\LoadinModal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\1.png" />
+    <Resource Include="assets\2.png" />
+    <Resource Include="assets\3.png" />
+    <Resource Include="assets\faq.png" />
+    <Resource Include="assets\logo.png" />
+    <Resource Include="assets\splash_v2.png" />
+    <Resource Include="assets\tg.png" />
+    <Resource Include="assets\yt.png" />
+    <Resource Include="ezgif.com-video-to-apng-converter.png" />
+    <Resource Include="favicon.ico" />
+    <Resource Include="rusttweaker logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
